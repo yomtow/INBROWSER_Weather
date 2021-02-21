@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>☔ ПОГОДА В БРАУЗЕРЕ</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="search_location">
+        <input type="text" placeholder="Название города" />
+        <button>Поиск</button>
+      </div>
+      <div class="text-center">
+        <a class="current_location" href="#">
+          <i class="fas fa-location-arrow"></i> Текущее местоположение
+        </a>
+      </div>
+
+      <div class="fade-container">
+        <div class="location">
+          <i class="fas fa-map-marker-alt"></i>
+          <h2>Лондон, GB</h2>
+        </div>
+
+        <h3 class="date"></h3>
+
+        <div class="temp-img">
+          <img src="https://openweathermap.org/img/wn/02n@2x.png" />
+          <h1>1.76°</h1>
+        </div>
+
+        <div class="feels-description">
+          <div class="feels-like">
+            Ощущается как -2.28°
+          </div>
+          <div class="description">
+            Небольшая облачность
+          </div>
+        </div>
+
+        <div class="white-container">
+          <div class="dado-valor">
+            <div class="dado">
+              <span><i style="color: yellow;" class="far fa-sun"></i></span>
+              Восход солнца
+            </div>
+            <div id="sunrise" class="valor">
+              05:25
+            </div>
+          </div>
+          <hr />
+
+          <div class="dado-valor">
+            <div class="dado">
+              <span><i class="fas fa-moon"></i></span> Закат солнца
+            </div>
+            <div id="sunset" class="valor">
+              18:45
+            </div>
+          </div>
+          <hr />
+
+          <div class="dado-valor">
+            <div class="dado">
+              <span><i style="color: blue;" class="fas fa-tint"></i></span>
+              Влага
+            </div>
+            <div id="humidity" class="valor">
+              93%
+            </div>
+          </div>
+          <hr />
+
+          <div class="dado-valor">
+            <div class="dado">
+              <span><i class="fas fa-sort-amount-down-alt"></i></span> Атмосферное давление
+            </div>
+            <div id="pressure" class="valor">
+              1022 hPa
+            </div>
+          </div>
+          <hr />
+
+          <div class="dado-valor">
+            <div class="dado">
+              <span><i style="color: black" class="fas fa-wind"></i></span>
+             Ветер
+            </div>
+            <div id="wind" class="valor">
+              3.1 m/s
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <i id="map-icon" class="fas fa-map-marked-alt"></i>
+        </div>
+        <div id="mapid"></div>
+      </div>
+	  <p style="text-align: center;"><br /></p><p style="text-align: center;">&nbsp;</p>
+      <p style="text-align: center;">
+      <span style="color: #134f5c;"><b>☔ ПОГОДА В БРАУЗЕРЕ😉</b></span>
+      </p>
+      <footer class="text-center">
+        <a style="text-decoration:none" class="signature" target="_blank" rel="noopener" href="https://berlinandrew.github.io/web_app_INBROWSER/">
+	    <span style="color:red;"></span>WebApps INBROWSER</a>
+      </footer>
+	  <p style="text-align: center;"><br /></p><p style="text-align: center;">&nbsp;</p>
+	  <p style="text-align: center;">
+      <span style="color: #073763;">
+      <span style="font-family: arial; font-size: medium;">▶️🏠&nbsp;<a href="https://berlinandrew.github.io/">НА ГЛАВНУЮ</a>
+	  </span>&nbsp;
+      </span></p>
+	  
+    </div>
+    
+
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <script src="https://kit.fontawesome.com/cfd8b43b94.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/pt-br.js" integrity="sha256-aIToY7VLU5x+toAJcyINV0WEogFBCIVeeWhyUbCaYiQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
